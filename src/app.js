@@ -11,6 +11,7 @@ const categoryRoutes = require('./routes/categories');
 const productRoutes = require('./routes/products');
 const wishlistRoutes = require('./routes/wishlists');
 const cartRoutes = require('./routes/carts');
+const orderRoutes = require('./routes/orders');
 
 const port = process.env.PORT || 3000;
 app.use(customerRoutes);
@@ -19,5 +20,6 @@ app.use(categoryRoutes);
 app.use(productRoutes);
 app.use(wishlistRoutes);
 app.use(cartRoutes);
+app.use(orderRoutes);
 
 app.listen(port);

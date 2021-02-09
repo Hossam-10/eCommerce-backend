@@ -39,14 +39,6 @@ cartSchema.methods.toJSON = function(){
     delete cart.updatedAt;
     return cart;
 }
-cartSchema.virtual('cartProducts',{
-    ref:"Product",
-    localField:"_id",
-    foreignField:"carts.cartId"
-})
-
-
-
 
 const Cart = mongoose.model('Cart',cartSchema);
 module.exports = Cart;

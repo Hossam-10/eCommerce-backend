@@ -132,5 +132,11 @@ customerSchema.virtual('customerCart',{
     foreignField:'customerId'
 })
 
+customerSchema.virtual('customerOrders',{
+    ref:'Order',
+    localField:'_id',
+    foreignField:'customerId'
+})
+
 const Customer = mongoose.model('Customer',customerSchema);
 module.exports = Customer;
